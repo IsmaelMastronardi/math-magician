@@ -5,10 +5,14 @@
 .resultBar {
   background-color: grey;
   color: white;
-  width: 100%;
-  height: 30px;
-  border: 0;
+  width: 389px;
+  height: 50px;
   padding: 0;
+  border: 1px solid black;
+  text-align: end;
+  padding-right: 10px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .resultBar::placeholder {
@@ -22,6 +26,7 @@
   border-left: 1px solid;
 }
 
+.symbolOrange,
 .symbol0,
 .symbol {
   border-right: 1px solid;
@@ -29,11 +34,26 @@
   border-left: 0;
   border-top: 0;
   width: 100px;
-  height: 100px;
-  background-color: lightblue;
+  height: 70px;
+  background-color: rgb(233, 233, 233);
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.15s;
 }
 
 .symbol0 {
   width: 200px;
-  background-color: lightcoral;
+}
+
+.symbolOrange {
+  background-color: orange;
+}
+
+.symbol0:active,
+.symbol:active {
+  background-color: rgb(199, 198, 198);
+}
+
+.symbolOrange:active {
+  background-color: rgb(211, 128, 4);
 }
