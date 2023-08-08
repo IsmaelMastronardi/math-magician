@@ -1,27 +1,62 @@
-body {
-  margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.calculator {
+  width: 401px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+.resultBar {
+  background-color: grey;
+  color: white;
+  width: 389px;
+  height: 50px;
+  padding: 0;
+  border: 1px solid black;
+  text-align: end;
+  padding-right: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.resultBar::placeholder {
+  color: white;
+}
+
+.calculatorItems {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: end;
+  border-left: 1px solid;
+}
+
+.symbolOrange,
+.symbol0,
+.symbol {
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 0;
+  border-top: 0;
+  width: 100px;
+  height: 70px;
+  background-color: rgb(233, 233, 233);
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.15s;
+}
+
+.symbol0 {
+  width: 200px;
+}
+
+.symbolOrange {
+  background-color: orange;
+}
+
+.symbol0:active,
+.symbol:active {
+  background-color: rgb(199, 198, 198);
+}
+
+.symbolOrange:active {
+  background-color: rgb(211, 128, 4);
 }
