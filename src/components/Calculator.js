@@ -23,10 +23,17 @@ CalcItem.propTypes = {
 };
 
 function InputBar(props) {
+  const { item } = props;
   return (
-    <input className="resultBar" value={props} />
+    <p>
+      {item}
+    </p>
   );
 }
+
+InputBar.propTypes = {
+  item: PropTypes.string.isRequired,
+};
 
 function Calculator() {
   const [myData, setMyData] = useState({
@@ -40,7 +47,7 @@ function Calculator() {
   };
   return (
     <article className="calculator">
-      <InputBar value={myData.total || myData.next || myData.operation || 0} />
+      <InputBar item={myData.total || myData.next || myData.operation || '0'} />
       <div className="calculatorItems">
         <CalcItem item="AC" itemClass="symbol" calc={() => handleClick('AC')} />
         <CalcItem item="+/-" itemClass="symbol" calc={() => handleClick('+/-')} />
