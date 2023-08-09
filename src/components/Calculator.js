@@ -47,7 +47,7 @@ function Calculator() {
   };
   return (
     <article className="calculator">
-      <InputBar item={myData.total || myData.next || myData.operation || '0'} />
+      <InputBar item={myData.next || myData.operation || myData.total || '0'} />
       <div className="calculatorItems">
         <CalcItem item="AC" itemClass="symbol" calc={() => handleClick('AC')} />
         <CalcItem item="+/-" itemClass="symbol" calc={() => handleClick('+/-')} />
