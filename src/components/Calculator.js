@@ -22,6 +22,12 @@ CalcItem.propTypes = {
   calc: PropTypes.func.isRequired,
 };
 
+function InputBar(props) {
+  return (
+    <input className="resultBar" value={props} />
+  );
+}
+
 function Calculator() {
   const [myData, setMyData] = useState({
     total: null,
@@ -29,32 +35,32 @@ function Calculator() {
     operation: null,
   });
 
-  const handleClick = () => {
-    setMyData(calculate(myData, 'AC'));
+  const handleClick = (item) => {
+    setMyData(calculate(myData, item));
   };
   return (
     <article className="calculator">
-      <input className="resultBar" value={myData.total || 1} />
+      <InputBar value={myData.total || myData.next || myData.operation || 0} />
       <div className="calculatorItems">
-        <CalcItem item="AC" itemClass="symbol" calc={() => handleClick} />
-        {/* <CalcItem item="+/-" itemClass="symbol" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="%" itemClass="symbol" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="÷" itemClass="symbolOrange" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="7" itemClass="symbol" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="8" itemClass="symbol" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="9" itemClass="symbol" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="X" itemClass="symbolOrange" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="4" itemClass="symbol" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="5" itemClass="symbol" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="6" itemClass="symbol" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="-" itemClass="symbolOrange" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="1" itemClass="symbol" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="2" itemClass="symbol" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="3" itemClass="symbol" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="+" itemClass="symbolOrange" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="0" itemClass="symbol0" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="." itemClass="symbol" calc={() => calculate(calcDataObj, 'AC')} />
-        <CalcItem item="=" itemClass="symbolOrange" calc={() => calculate(calcDataObj, 'AC')} /> */}
+        <CalcItem item="AC" itemClass="symbol" calc={() => handleClick('AC')} />
+        <CalcItem item="+/-" itemClass="symbol" calc={() => handleClick('+/-')} />
+        <CalcItem item="%" itemClass="symbol" calc={() => handleClick('%')} />
+        <CalcItem item="÷" itemClass="symbolOrange" calc={() => handleClick('÷')} />
+        <CalcItem item="7" itemClass="symbol" calc={() => handleClick('7')} />
+        <CalcItem item="8" itemClass="symbol" calc={() => handleClick('8')} />
+        <CalcItem item="9" itemClass="symbol" calc={() => handleClick('9')} />
+        <CalcItem item="X" itemClass="symbolOrange" calc={() => handleClick('x')} />
+        <CalcItem item="4" itemClass="symbol" calc={() => handleClick('4')} />
+        <CalcItem item="5" itemClass="symbol" calc={() => handleClick('5')} />
+        <CalcItem item="6" itemClass="symbol" calc={() => handleClick('6')} />
+        <CalcItem item="-" itemClass="symbolOrange" calc={() => handleClick('-')} />
+        <CalcItem item="1" itemClass="symbol" calc={() => handleClick('1')} />
+        <CalcItem item="2" itemClass="symbol" calc={() => handleClick('2')} />
+        <CalcItem item="3" itemClass="symbol" calc={() => handleClick('3')} />
+        <CalcItem item="+" itemClass="symbolOrange" calc={() => handleClick('+')} />
+        <CalcItem item="0" itemClass="symbol0" calc={() => handleClick('0')} />
+        <CalcItem item="." itemClass="symbol" calc={() => handleClick('.')} />
+        <CalcItem item="=" itemClass="symbolOrange" calc={() => handleClick('=')} />
       </div>
     </article>
   );
