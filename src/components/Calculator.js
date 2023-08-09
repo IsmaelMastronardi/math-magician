@@ -22,16 +22,16 @@ CalcItem.propTypes = {
   calc: PropTypes.func.isRequired,
 };
 
-function InputBar(props) {
+function ResultBar(props) {
   const { item } = props;
   return (
-    <p>
+    <p className="resultBar">
       {item}
     </p>
   );
 }
 
-InputBar.propTypes = {
+ResultBar.propTypes = {
   item: PropTypes.string.isRequired,
 };
 
@@ -47,7 +47,7 @@ function Calculator() {
   };
   return (
     <article className="calculator">
-      <InputBar item={myData.next || myData.operation || myData.total || '0'} />
+      <ResultBar item={myData.next || myData.operation || myData.total || '0'} />
       <div className="calculatorItems">
         <CalcItem item="AC" itemClass="symbol" calc={() => handleClick('AC')} />
         <CalcItem item="+/-" itemClass="symbol" calc={() => handleClick('+/-')} />
