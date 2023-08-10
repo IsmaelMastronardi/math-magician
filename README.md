@@ -38,6 +38,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **[Single Page Application build using React]**
+- **[Calculator Functionality]**
 
 
 
@@ -123,7 +124,7 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add and Remove books]**
+- [ ] **[API usage]**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -132,7 +133,7 @@ Example command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/IsmaelMastronardi/MicroverseCalculator/issues).
+Feel free to check the [issues page](https://github.com/IsmaelMastronardi/math-magician/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
