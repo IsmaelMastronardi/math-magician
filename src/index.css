@@ -62,3 +62,9 @@
 .symbolOrange:active {
   background-color: rgb(211, 128, 4);
 }
+
+.quotes {
+  padding: 70px;
+  font-size: 20px;
+  text-align: center;
+}

@@ -7,7 +7,7 @@ const ComputerQuotes = () => {
 
   useEffect(() => {
     const fetchQuote = async () => {
-      const category = 'hapiness';
+      const category = 'computers';
       const result = await fetch(`https://api.api-ninjas.com/v1/quotes?category=${category}`, {
         method: 'GET',
         headers: { 'X-Api-Key': 'St8XblZ+dlsMEoh/ukYC8Q==JuLsC7tTNp0OCP2V' },
@@ -26,16 +26,16 @@ const ComputerQuotes = () => {
   }, []);
   if (loadingComment) {
     return (
-      <p>Loading Comment...</p>
+      <p className="quotes">Loading Comment...</p>
     );
   }
   if (errorFound) {
     return (
-      <p>Sorry, an error has been found. Try again</p>
+      <p className="quotes">Sorry, an error has been found. Try again</p>
     );
   }
   return (
-    <p>{quote}</p>
+    <p className="quotes">{quote}</p>
   );
 };
 
