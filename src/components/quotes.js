@@ -6,23 +6,23 @@ const ComputerQuotes = () => {
   const [errorFound, setErrorFound] = useState(null);
 
   useEffect(() => {
-    try {
-      const fetchQuote = async () => {
-        const category = 'happiness';
-        const result = await fetch(`https://api.api-ninjas.com/v1/quotes?category=${category}`, {
-          method: 'GET',
-          headers: { 'X-Api-Key': 'St8XblZ+dlsMEoh/ukYC8Q==JuLsC7tTNp0OCP2V' },
-          contentType: 'application/json',
-        });
+    const fetchQuote = async () => {
+      const category = 'hapiness';
+      const result = await fetch(`https://api.api-ninjas.com/v1/quotes?category=${category}`, {
+        method: 'GET',
+        headers: { 'X-Api-Key': 'St8XblZ+dlsMEoh/ukYC8Q==JuLsC7tTNp0OCP2V' },
+        contentType: 'application/json',
+      });
+      try {
         const json = await result.json();
-        console.log(json);
         setQuote(json[0].quote);
         setLoadingComment(false);
-      };
-      fetchQuote();
-    } catch (error) {
-      setErrorFound(true);
-    }
+      } catch (error) {
+        setErrorFound(true);
+        setLoadingComment(false);
+      }
+    };
+    fetchQuote();
   }, []);
   if (loadingComment) {
     return (
