@@ -6,16 +6,18 @@
 }
 
 .resultBar {
+  display: flex;
+  align-items: center;
+  justify-content: end;
   background-color: grey;
   color: white;
   width: 389px;
   height: 50px;
-  padding: 0;
   border: 1px solid black;
-  text-align: end;
   padding-right: 10px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 26px;
+  margin: 0;
 }
 
 .resultBar::placeholder {

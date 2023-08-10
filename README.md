@@ -38,15 +38,9 @@
 ### Key Features <a name="key-features"></a>
 
 - **[Single Page Application build using React]**
+- **[Calculator Functionality]**
 
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-- [Coming soon]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,7 +124,7 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add and Remove books]**
+- [ ] **[API usage]**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -139,7 +133,7 @@ Example command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/IsmaelMastronardi/MicroverseCalculator/issues).
+Feel free to check the [issues page](https://github.com/IsmaelMastronardi/math-magician/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -154,7 +148,7 @@ If you like this project plese support it through these emails:
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
+  I would like to thank Javier Aybar for helping me with some issue.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
