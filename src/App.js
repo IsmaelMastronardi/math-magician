@@ -7,8 +7,9 @@ import './App.css';
 function App() {
   return (
     <>
-      <nav className="pageLinks">
-        <ul className="navList">
+      <nav className="pageLinks flexRow">
+        <h1 className="pageTitle">Math Magicians</h1>
+        <ul className="navList flexRow">
           <li>
             <Link to="/">Home</Link>
           </li>

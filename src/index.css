@@ -1,3 +1,8 @@
+body {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .calculator {
   width: 401px;
   margin-left: auto;
@@ -31,9 +36,9 @@
   border-left: 1px solid;
 }
 
-.symbolOrange,
-.symbol0,
-.symbol {
+.orangeButton,
+.greyButton0,
+.greyButton {
   border-right: 1px solid;
   border-bottom: 1px solid;
   border-left: 0;
@@ -46,11 +51,11 @@
   transition: 0.15s;
 }
 
-.symbol0 {
+.greyButton0 {
   width: 200px;
 }
 
-.symbolOrange {
+.orangeButton {
   background-color: orange;
 }
 
@@ -59,7 +64,7 @@
   background-color: rgb(199, 198, 198);
 }
 
-.symbolOrange:active {
+.orangeButton:active {
   background-color: rgb(211, 128, 4);
 }
 

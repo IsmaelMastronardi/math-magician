@@ -1,7 +1,6 @@
 function HomePage() {
   return (
     <div>
-      <h1>Math Magicians</h1>
       <h2>Welcome to my Page!</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

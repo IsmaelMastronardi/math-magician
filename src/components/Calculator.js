@@ -1,38 +1,7 @@
-import PropTypes from 'prop-types';
 import { useState } from 'react';
 import calculate from '../logic/calculate';
-
-function CalcItem(props) {
-  const { item, itemClass, calc } = props;
-  return (
-    <button
-      type="button"
-      className={itemClass}
-      onClick={calc}
-    >
-      {item}
-    </button>
-  );
-}
-
-CalcItem.propTypes = {
-  item: PropTypes.string.isRequired,
-  itemClass: PropTypes.string.isRequired,
-  calc: PropTypes.func.isRequired,
-};
-
-function ResultBar(props) {
-  const { item } = props;
-  return (
-    <p className="resultBar">
-      {item}
-    </p>
-  );
-}
-
-ResultBar.propTypes = {
-  item: PropTypes.string.isRequired,
-};
+import ResultBar from './CalculatorBar';
+import CalculatorButtons from './CalcButtons';
 
 function Calculator() {
   const [myData, setMyData] = useState({
@@ -44,29 +13,35 @@ function Calculator() {
   const handleClick = (item) => {
     setMyData(calculate(myData, item));
   };
+  const calcSymbols = [
+    { symbol: 'AC', class: 'greyButton' },
+    { symbol: '+/-', class: 'greyButton' },
+    { symbol: '%', class: 'greyButton' },
+    { symbol: '÷', class: 'orangeButton' },
+    { symbol: '7', class: 'greyButton' },
+    { symbol: '8', class: 'greyButton' },
+    { symbol: '9', class: 'greyButton' },
+    { symbol: 'x', class: 'orangeButton' },
+    { symbol: '4', class: 'greyButton' },
+    { symbol: '5', class: 'greyButton' },
+    { symbol: '6', class: 'greyButton' },
+    { symbol: '-', class: 'orangeButton' },
+    { symbol: '1', class: 'greyButton' },
+    { symbol: '2', class: 'greyButton' },
+    { symbol: '3', class: 'greyButton' },
+    { symbol: '+', class: 'orangeButton' },
+    { symbol: '0', class: 'greyButton0' },
+    { symbol: '.', class: 'greyButton' },
+    { symbol: '=', class: 'orangeButton' },
+  ];
   return (
     <article className="calculator">
       <ResultBar item={myData.next || myData.operation || myData.total || '0'} />
       <div className="calculatorItems">
-        <CalcItem item="AC" itemClass="symbol" calc={() => handleClick('AC')} />
-        <CalcItem item="+/-" itemClass="symbol" calc={() => handleClick('+/-')} />
-        <CalcItem item="%" itemClass="symbol" calc={() => handleClick('%')} />
-        <CalcItem item="÷" itemClass="symbolOrange" calc={() => handleClick('÷')} />
-        <CalcItem item="7" itemClass="symbol" calc={() => handleClick('7')} />
-        <CalcItem item="8" itemClass="symbol" calc={() => handleClick('8')} />
-        <CalcItem item="9" itemClass="symbol" calc={() => handleClick('9')} />
-        <CalcItem item="X" itemClass="symbolOrange" calc={() => handleClick('x')} />
-        <CalcItem item="4" itemClass="symbol" calc={() => handleClick('4')} />
-        <CalcItem item="5" itemClass="symbol" calc={() => handleClick('5')} />
-        <CalcItem item="6" itemClass="symbol" calc={() => handleClick('6')} />
-        <CalcItem item="-" itemClass="symbolOrange" calc={() => handleClick('-')} />
-        <CalcItem item="1" itemClass="symbol" calc={() => handleClick('1')} />
-        <CalcItem item="2" itemClass="symbol" calc={() => handleClick('2')} />
-        <CalcItem item="3" itemClass="symbol" calc={() => handleClick('3')} />
-        <CalcItem item="+" itemClass="symbolOrange" calc={() => handleClick('+')} />
-        <CalcItem item="0" itemClass="symbol0" calc={() => handleClick('0')} />
-        <CalcItem item="." itemClass="symbol" calc={() => handleClick('.')} />
-        <CalcItem item="=" itemClass="symbolOrange" calc={() => handleClick('=')} />
+        <CalculatorButtons
+          arr={calcSymbols}
+          handleClick={handleClick}
+        />
       </div>
     </article>
   );
