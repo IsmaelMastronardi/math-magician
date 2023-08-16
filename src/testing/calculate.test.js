@@ -18,20 +18,6 @@ describe('Calculates', () => {
   test('Use = to show result', () => {
     const myObj = {
       total: '120',
-      next: '120',
-      operation: '+',
-    };
-    const btnName = '=';
-    const restul = calculate(myObj, btnName);
-    expect(restul).toEqual({
-      total: '240',
-      next: null,
-      operation: null,
-    });
-  });
-  test('Use = to show result', () => {
-    const myObj = {
-      total: '120',
       next: '0',
       operation: '+',
     };
@@ -87,7 +73,7 @@ describe('Calculates', () => {
   });
   test('Use = to show result', () => {
     const myObj = {
-      total: '120',
+      total: null,
       next: '100.',
       operation: null,
     };
@@ -99,7 +85,7 @@ describe('Calculates', () => {
   });
   test('Use = to show result', () => {
     const myObj = {
-      total: '120',
+      total: null,
       next: '100',
       operation: null,
     };
@@ -107,6 +93,56 @@ describe('Calculates', () => {
     const restul = calculate(myObj, btnName);
     expect(restul).toEqual({
       ...myObj, next: `${myObj.next}.`,
+    });
+  });
+  test('Use = to show result', () => {
+    const myObj = {
+      total: null,
+      next: '0.',
+      operation: '+',
+    };
+    const btnName = '.';
+    const restul = calculate(myObj, btnName);
+    expect(restul).toEqual({
+      ...myObj, next: '0.',
+    });
+  });
+  test('Use = to show result', () => {
+    const myObj = {
+      total: '120',
+      next: '0.',
+      operation: '+',
+    };
+    const btnName = '.';
+    const restul = calculate(myObj, btnName);
+    expect(restul).toEqual({
+      ...myObj, next: '0.',
+    });
+  });
+  test('Use = to show result', () => {
+    const myObj = {
+      total: '120',
+      next: '120',
+      operation: '+',
+    };
+    const btnName = '=';
+    const restul = calculate(myObj, btnName);
+    expect(restul).toEqual({
+      total: '240',
+      next: null,
+      operation: null,
+    });
+  });
+  test('Use = to show result', () => {
+    const myObj = {
+      total: '120',
+      next: '120',
+      operation: '+',
+    };
+    const btnName = '+/-';
+    const restul = calculate(myObj, btnName);
+    expect(restul).toEqual({
+      ...myObj, next: (-1 * parseFloat(myObj.next)).toString(),
     });
   });
 });
