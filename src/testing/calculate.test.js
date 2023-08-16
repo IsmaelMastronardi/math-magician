@@ -15,7 +15,7 @@ describe('Calculates', () => {
       operation: null,
     });
   });
-  test('Use = to show result', () => {
+  test('Use 0 when next is 0', () => {
     const myObj = {
       total: '120',
       next: '0',
@@ -25,7 +25,7 @@ describe('Calculates', () => {
     const restul = calculate(myObj, btnName);
     expect(restul).toEqual({});
   });
-  test('Use = to show result', () => {
+  test('if there is operation and user uses 0 and next is no 0', () => {
     const myObj = {
       total: '120',
       next: '100',
@@ -35,7 +35,7 @@ describe('Calculates', () => {
     const restul = calculate(myObj, btnName);
     expect(restul).toEqual({ ...myObj, next: myObj.next + btnName });
   });
-  test('Use = to show result', () => {
+  test('Use 0 and there is not operation or next is also 0', () => {
     const myObj = {
       total: '120',
       next: null,
@@ -45,7 +45,7 @@ describe('Calculates', () => {
     const restul = calculate(myObj, btnName);
     expect(restul).toEqual({ ...myObj, next: btnName });
   });
-  test('Use = to show result', () => {
+  test('Use 0 when there is no operation', () => {
     const myObj = {
       total: '120',
       next: '100',
@@ -58,7 +58,7 @@ describe('Calculates', () => {
       total: null,
     });
   });
-  test('Use = to show result', () => {
+  test('next  equals btnName', () => {
     const myObj = {
       total: '120',
       next: null,
@@ -71,7 +71,7 @@ describe('Calculates', () => {
       total: null,
     });
   });
-  test('Use = to show result', () => {
+  test('Use . and next has .', () => {
     const myObj = {
       total: null,
       next: '100.',
@@ -83,7 +83,7 @@ describe('Calculates', () => {
       ...myObj,
     });
   });
-  test('Use = to show result', () => {
+  test('Use . and next does not have .', () => {
     const myObj = {
       total: null,
       next: '100',
@@ -95,7 +95,7 @@ describe('Calculates', () => {
       ...myObj, next: `${myObj.next}.`,
     });
   });
-  test('Use = to show result', () => {
+  test('Use . and there is operation', () => {
     const myObj = {
       total: null,
       next: '0.',
@@ -107,7 +107,7 @@ describe('Calculates', () => {
       ...myObj, next: '0.',
     });
   });
-  test('Use = to show result', () => {
+  test('Use . and there is total', () => {
     const myObj = {
       total: '120',
       next: '0.',
@@ -133,7 +133,7 @@ describe('Calculates', () => {
       operation: null,
     });
   });
-  test('Use = to show result', () => {
+  test('Use +/-', () => {
     const myObj = {
       total: '120',
       next: '120',
