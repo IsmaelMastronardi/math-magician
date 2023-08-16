@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import CalcItem from './CalcItem';
 
 function CalculatorButtons({ arr, handleClick }) {
-  console.log(arr);
   return (
-    <>
+    <div className="calculatorItems">
       {arr.map((item) => (
         <CalcItem
           key={item.symbol}
@@ -14,12 +13,12 @@ function CalculatorButtons({ arr, handleClick }) {
           calc={() => handleClick(item.symbol)}
         />
       ))}
-    </>
+    </div>
   );
 }
 
 CalculatorButtons.propTypes = {
-  arr: PropTypes.arrayOf(PropTypes.string).isRequired,
+  arr: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
   handleClick: PropTypes.func.isRequired,
 };
 

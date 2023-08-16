@@ -3,6 +3,9 @@ import Calculator from './components/Calculator';
 import ComputerQuotes from './components/quotes';
 import HomePage from './components/Home';
 import './App.css';
+import './styles/homePage.css';
+import './styles/calculator.css';
+import './styles/navbar.css';
 
 function App() {
   return (

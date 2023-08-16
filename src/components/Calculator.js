@@ -35,14 +35,16 @@ function Calculator() {
     { symbol: '=', class: 'orangeButton' },
   ];
   return (
-    <article className="calculator">
-      <ResultBar item={myData.next || myData.operation || myData.total || '0'} />
-      <div className="calculatorItems">
+    <article className="calculatorPage">
+      <h2 className="calcTitle">Lets Do Some Math!</h2>
+      <div className="calculator">
+        <ResultBar item={myData.next || myData.operation || myData.total || '0'} />
         <CalculatorButtons
           arr={calcSymbols}
           handleClick={handleClick}
         />
       </div>
+
     </article>
   );
 }
