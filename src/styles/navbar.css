@@ -1,0 +1,36 @@
+.pageLinks {
+  background-color: rgb(49, 44, 44);
+  height: 60px;
+  width: 100%;
+  justify-content: space-between;
+  color: white;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navList {
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  margin-right: 3%;
+  height: 100%;
+}
+
+a:visited,
+a:hover,
+a:link,
+a:active {
+  color: rgb(170, 124, 56);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+a:hover {
+  font-size: 1.6rem;
+}

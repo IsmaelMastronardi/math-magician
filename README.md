@@ -40,6 +40,7 @@
 - **[Single Page Application build using React]**
 - **[Calculator Functionality]**
 - **[Shows a random computer quote]**
+- **[Uses Routers to display different sections of the page]**
 
 
 
