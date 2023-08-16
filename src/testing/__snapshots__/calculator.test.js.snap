@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Renders a calculator render calculator 1`] = `undefined`;
+
 exports[`Renders a home page render calculator 1`] = `undefined`;
