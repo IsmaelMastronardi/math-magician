@@ -1,4 +1,4 @@
-import { getByTestId, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import ResultBar from '../components/CalculatorBar';
 
 describe('Renders a result bar', () => {
