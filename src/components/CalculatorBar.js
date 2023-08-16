@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 function ResultBar(props) {
   const { item } = props;
   return (
-    <p className="resultBar">
+    <p className="resultBar" data-testid="resultBarTestId">
       {item}
     </p>
   );

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders a result bar get value from result bar 1`] = `undefined`;
+
+exports[`Renders a result bar render 1`] = `undefined`;
