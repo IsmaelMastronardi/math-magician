@@ -154,7 +154,7 @@ describe('Calculates', () => {
     const btnName = '+/-';
     const restul = calculate(myObj, btnName);
     expect(restul).toEqual({
-      ...myObj, total: (-1 * parseFloat(myObj.total)).toString() ,
+      ...myObj, total: (-1 * parseFloat(myObj.total)).toString(),
     });
   });
 });
