@@ -2,13 +2,13 @@ import { fireEvent, render } from '@testing-library/react';
 import CalcItem from '../components/CalcItem';
 
 describe('Renders a individual buttons for the calculator', () => {
-  const myFunc = () => {};
-  const { btn } = render(<CalcItem
-    item="+"
-    itemClass="class"
-    calc={myFunc}
-  />);
   test('render', () => {
+    const myFunc = jest.fn();
+    const { btn } = render(<CalcItem
+      item="+"
+      itemClass="class"
+      calc={myFunc}
+    />);
     expect(btn).toMatchSnapshot();
   });
   test('press a button', () => {
