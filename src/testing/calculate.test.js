@@ -133,9 +133,9 @@ describe('Calculates', () => {
       operation: null,
     });
   });
-  test('Use +/-', () => {
+  test('Use +/- when the total is null', () => {
     const myObj = {
-      total: '120',
+      total: null,
       next: '120',
       operation: '+',
     };
@@ -143,6 +143,18 @@ describe('Calculates', () => {
     const restul = calculate(myObj, btnName);
     expect(restul).toEqual({
       ...myObj, next: (-1 * parseFloat(myObj.next)).toString(),
+    });
+  });
+  test('Use +/- when the next is null', () => {
+    const myObj = {
+      total: '120',
+      next: null,
+      operation: '+',
+    };
+    const btnName = '+/-';
+    const restul = calculate(myObj, btnName);
+    expect(restul).toEqual({
+      ...myObj, total: (-1 * parseFloat(myObj.total)).toString() ,
     });
   });
 });
