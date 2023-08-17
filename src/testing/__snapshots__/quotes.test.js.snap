@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders a random computer quote render 1`] = `undefined`;
+
+exports[`Renders a random computer quote render 2`] = `undefined`;
+
+exports[`Renders a result bar render 1`] = `undefined`;

@@ -4,6 +4,7 @@ function CalcItem(props) {
   const { item, itemClass, calc } = props;
   return (
     <button
+      data-testid="buttonTestId"
       type="button"
       className={itemClass}
       onClick={calc}
